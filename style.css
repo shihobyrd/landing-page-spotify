@@ -195,11 +195,11 @@ svg {
 }
 
 .fs-body {
-    font-style: var(--fs-body);
+    font-size: var(--fs-400);
 }
 
 .fs-btn {
-    font-style: var(--fs-btn);
+    font-size: var(--fs-400);
 }
 
 .fs-100 {
