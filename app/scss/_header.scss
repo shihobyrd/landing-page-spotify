@@ -1,19 +1,30 @@
 .header {
+    max-width: 1170px;
+    margin: 20px auto;
+
+    @include breakpoint-down(medium) {
+        max-width: 750px;
+        margin: 10px auto;
+    }
 
     nav {
-        padding: 24px;
+        padding: 0 15px;
     }
 
     &__logo {
 
         svg {
-            width: 45%;
+            width: 132px;
             fill: currentColor;
+
+            @include breakpoint-down(medium) {
+                width: 89px;
+            }
         }
+
     }
 
     &__menu {
-        // Mobile Menu
 
         >span {
             display: block;
@@ -24,6 +35,36 @@
 
             &:not(:last-child) {
                 margin-bottom: 4px;
+            }
+        }
+    }
+
+    &__links {
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            margin: 0 17px;
+
+            &:last-child {
+                margin-right: 0px;
+            }
+
+            a {
+                font-size: $fs-md;
+                font-weight: 700;
+                color: $white;
+                transition: color 200ms ease-in-out;
+
+                &:hover {
+                    color: $green;
+                }
+            }
+
+            span {
+                border-left: 1px solid $white;
+                height: 16px;
             }
         }
     }
