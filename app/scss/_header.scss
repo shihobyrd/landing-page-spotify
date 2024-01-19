@@ -1,0 +1,30 @@
+.header {
+
+    nav {
+        padding: 24px;
+    }
+
+    &__logo {
+
+        svg {
+            width: 45%;
+            fill: currentColor;
+        }
+    }
+
+    &__menu {
+        // Mobile Menu
+
+        >span {
+            display: block;
+            width: 22px;
+            height: 3px;
+            background-color: $white;
+            border-radius: 1px;
+
+            &:not(:last-child) {
+                margin-bottom: 4px;
+            }
+        }
+    }
+}
