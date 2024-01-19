@@ -65,16 +65,20 @@ button,
 
 .header {
   max-width: 1170px;
-  margin: 20px auto;
+  margin: 0 auto;
 }
 @media (max-width: 61.875em) {
   .header {
     max-width: 750px;
-    margin: 10px auto;
   }
 }
 .header nav {
-  padding: 0 15px;
+  padding: 1rem;
+}
+@media (max-width: 61.875em) {
+  .header nav {
+    padding: 0.65rem 1rem;
+  }
 }
 .header__logo svg {
   width: 132px;
@@ -110,7 +114,7 @@ button,
   font-size: 1rem;
   font-weight: 700;
   color: hsl(0, 0%, 100%);
-  transition: color 200ms ease-in-out;
+  transition: color 300ms ease-in-out;
 }
 .header__links li a:hover {
   color: hsl(141, 76%, 48%);

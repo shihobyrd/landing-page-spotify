@@ -1,14 +1,17 @@
 .header {
     max-width: 1170px;
-    margin: 20px auto;
+    margin: 0 auto;
 
     @include breakpoint-down(medium) {
         max-width: 750px;
-        margin: 10px auto;
     }
 
     nav {
-        padding: 0 15px;
+        padding: 1rem;
+
+        @include breakpoint-down(medium) {
+            padding: .65rem 1rem;
+        }
     }
 
     &__logo {
@@ -55,7 +58,7 @@
                 font-size: $fs-md;
                 font-weight: 700;
                 color: $white;
-                transition: color 200ms ease-in-out;
+                transition: color 300ms ease-in-out;
 
                 &:hover {
                     color: $green;
