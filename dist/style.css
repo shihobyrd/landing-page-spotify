@@ -1,3 +1,38 @@
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: fade-in 300ms ease-in-out forwards;
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.fade-out {
+  animation: fade-out 300ms ease-in-out forwards;
+}
+
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -72,6 +107,24 @@ button,
     max-width: 750px;
   }
 }
+.header.open .header__menu > span:first-child {
+  transform: rotate(-45deg);
+}
+.header.open .header__menu > span:nth-child(2) {
+  opacity: 0;
+}
+.header.open .header__menu > span:last-child {
+  transform: rotate(45deg);
+}
+.header .overlay {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
 .header nav {
   padding: 1rem;
 }
@@ -95,6 +148,8 @@ button,
   height: 3px;
   background-color: hsl(0, 0%, 100%);
   border-radius: 1px;
+  transition: all 200ms ease-in-out;
+  transform-origin: 21px;
 }
 .header__menu > span:not(:last-child) {
   margin-bottom: 4px;

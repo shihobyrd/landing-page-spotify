@@ -6,6 +6,34 @@
         max-width: 750px;
     }
 
+    // Hamburger OPen Styles
+    &.open {
+
+        .header__menu {
+            >span:first-child {
+                transform: rotate(-45deg);
+            }
+
+            >span:nth-child(2) {
+                opacity: 0;
+            }
+
+            >span:last-child {
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    .overlay {
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba($black, .75);
+    }
+
     nav {
         padding: 1rem;
 
@@ -35,6 +63,8 @@
             height: 3px;
             background-color: $white;
             border-radius: 1px;
+            transition: all 200ms ease-in-out;
+            transform-origin: 21px;
 
             &:not(:last-child) {
                 margin-bottom: 4px;
