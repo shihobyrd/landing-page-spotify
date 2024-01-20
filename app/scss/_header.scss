@@ -1,9 +1,13 @@
 .header {
-    max-width: 1170px;
-    margin: 0 auto;
+    background-color: $black;
 
-    @include breakpoint-down(medium) {
-        max-width: 750px;
+    .container {
+        max-width: 1170px;
+        margin: 0 auto;
+
+        @include breakpoint-down(medium) {
+            max-width: 750px;
+        }
     }
 
     // Hamburger Open Styles
