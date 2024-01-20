@@ -98,12 +98,20 @@
                     color: $white;
                     transition: color 300ms ease-in-out;
 
+                    @include breakpoint-down(xsmall) {
+                        font-size: $fs-650;
+                    }
+
                     &:hover {
                         color: $green;
                     }
 
                     &.account {
                         font-size: $fs-600;
+
+                        @include breakpoint-down(xsmall) {
+                            font-size: $fs-500;
+                        }
                     }
                 }
 

@@ -186,11 +186,21 @@ button,
   color: hsl(0, 0%, 100%);
   transition: color 300ms ease-in-out;
 }
+@media (max-width: 29.875rem) {
+  .header__menu ul li a {
+    font-size: 1.875rem;
+  }
+}
 .header__menu ul li a:hover {
   color: hsl(141, 76%, 48%);
 }
 .header__menu ul li a.account {
   font-size: 1.75rem;
+}
+@media (max-width: 29.875rem) {
+  .header__menu ul li a.account {
+    font-size: 1.5rem;
+  }
 }
 .header__menu ul li span {
   display: block;
