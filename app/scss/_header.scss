@@ -6,10 +6,10 @@
         max-width: 750px;
     }
 
-    // Hamburger OPen Styles
+    // Hamburger Open Styles
     &.open {
 
-        .header__menu {
+        .header__toggle {
             >span:first-child {
                 transform: rotate(-45deg);
             }
@@ -25,7 +25,7 @@
     }
 
     .overlay {
-        opacity: 0;
+        visibility: hidden;
         position: fixed;
         top: 0;
         bottom: 0;
@@ -52,10 +52,10 @@
                 width: 89px;
             }
         }
-
     }
 
-    &__menu {
+    // Hamburger Menu
+    &__toggle {
 
         >span {
             display: block;
@@ -68,6 +68,57 @@
 
             &:not(:last-child) {
                 margin-bottom: 4px;
+            }
+        }
+    }
+
+    // Mobile Menu
+    &__menu {
+        visibility: hidden;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 447px;
+        max-width: 100vw;
+        background: $black;
+        margin: 0;
+        padding: 2.375rem;
+        height: 100vh;
+
+        ul {
+            padding: 0;
+
+            li {
+                list-style: none;
+                padding-bottom: 25px;
+
+                a {
+                    font-size: $fs-800;
+                    font-weight: 700;
+                    color: $white;
+                    transition: color 300ms ease-in-out;
+
+                    &:hover {
+                        color: $green;
+                    }
+
+                    &.account {
+                        font-size: $fs-600;
+                    }
+                }
+
+                span {
+                    display: block;
+                    border-bottom: 2px solid $white;
+                    width: 20px;
+                }
+            }
+        }
+
+        .header__logo {
+            svg {
+                width: 89px;
+                fill: currentColor;
             }
         }
     }
@@ -85,7 +136,7 @@
             }
 
             a {
-                font-size: $fs-md;
+                font-size: $fs-400;
                 font-weight: 700;
                 color: $white;
                 transition: color 300ms ease-in-out;
